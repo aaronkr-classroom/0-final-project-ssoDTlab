@@ -1,0 +1,44 @@
+<h1 class="center">Restaurant Data for
+    <%= restaurant.title %>
+  </h1>
+  
+  <table class="table">
+    <tr>
+      <th>Title</th>
+      <td>
+        <%= restaurant.title %>
+      </td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td>
+        <%= restaurant.description%>
+      </td>
+    </tr>
+    <tr>
+      <th>Max Students</th>
+      <td>
+        <%= restaurant.maxStudents%>
+      </td>
+    </tr>
+    <tr>
+      <th>Cost</th>
+      <td>$
+        <%= restaurant.cost%>
+      </td>
+    </tr>
+  </table>
+  
+  
+  <div>
+    <a class="button" href="<%=`/restaurants/${restaurant._id}/edit`%>">
+      Edit Restaurant Details
+    </a>
+  </div>
+  <div>
+    <a class="button" href="<%= `/restaurants/${restaurant._id}/delete?_method=DELETE` %>" onclick="return confirm('Are you sure you want to delete this record?')" a>Delete</a>
+  </div>
+  <div>
+    <a class="button" href="/restaurants">View all restaurants</a>
+  </div>
+  
